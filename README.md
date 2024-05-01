@@ -1,0 +1,30 @@
+# Linux command list
+- ls (LiSt)
+ -option: -a, -l
+- pwd (Print Working Directory)
+- cd (Change Directory)
+- mkdir (MaKe DIRectory)
+ -option: -p
+- touch (make file)
+- && (and)
+- cp (CoPy)
+ -option: -r
+- mv (MoVe)
+- rm (ReMove)
+ -option: -r, -f
+- *, ? (wild card)
+- cat (CATnate)
+- > (fill in file)
+- >> (append at the end of file)
+- vi (edit file)
+ -change mode KEY: i (insert mode), esc (normal mode)
+ -normal mode operate:
+  - j (move down),
+  - k (move up),
+  - h (move left),
+  - l (move right),
+  - :w (save),
+  - :wq (save and exit),
+  - :q! (not save and exit),
+  - u (return previous change content),
+  - Ctrl + r (proceed next change content)
