@@ -1,30 +1,40 @@
 # Linux command list
-- ls (LiSt)
- -option: -a, -l
-- pwd (Print Working Directory)
-- cd (Change Directory)
-- mkdir (MaKe DIRectory)
- -option: -p
-- touch (make file)
-- && (and)
-- cp (CoPy)
- -option: -r
-- mv (MoVe)
-- rm (ReMove)
- -option: -r, -f
-- *, ? (wild card)
-- cat (CATnate)
-- > (fill in file)
-- >> (append at the end of file)
-- vi (edit file)
- -change mode KEY: i (insert mode), esc (normal mode)
- -normal mode operate:
-  - j (move down),
-  - k (move up),
-  - h (move left),
-  - l (move right),
-  - :w (save),
-  - :wq (save and exit),
-  - :q! (not save and exit),
-  - u (return previous change content),
-  - Ctrl + r (proceed next change content)
+- ls (LiSt) ディレクトリ内のディレクトリやファイルを一覧表示
+  - オプション: -a (不可視ファイルも表示), -l (タイプや権限、所有者や所有グループなどの詳細情報を表示)
+- pwd (Print Working Directory) ワーキングディレクトリ（自分が現在いるディレクトリ）を出力
+- cd (Change Directory) ワーキングディレクトリを指定したディレクトリに変更
+  - 指定するパスのコマンド
+    - 「~」 (ホームディレクトリ)
+    - 「/」 (ルートディレクトリ)
+    - 「-」 (移動前に位置していたディレクトリ)
+    - 「.」 (ワーキングディレクトリ)
+    - 「..」 (ワーキングディレクトリの一階層上のディレクトリ)
+    - 「../../」 (ワーキングディレクトリの二階層上のディレクトリ)
+  - パスの指定方法は2つあり、ルートディレクトリから参照する絶対パスと、ワーキングディレクトリから参照する相対パスがある。
+- mkdir (MaKe DIRectory) ディレクトリを作成
+  - オプション: -p (途中に存在しないディレクトリを含めてディレクトリを作成)
+- touch ファイルを作成
+- && (and) 一度に複数の処理が可能、左辺の実行が成功すれば右辺を実行
+- cp (CoPy) ファイルやディレクトリのコピーを作成、通常はファイルのコピーを作成
+  - オプション: -r (ディレクトリのコピーを作成)
+- mv (MoVe) ファイルやディレクトリの移動または名前変更
+- rm (ReMove) ファイルやディレクトリの削除
+  - オプション: -r (ディレクトリの削除), -f (警告メッセージを表示せずに削除)
+- ワイルドカード ワイルドカード以外の部分がマッチするファイルやディレクトリ全てを対象として操作可能
+  - * (0文字以上の任意の文字)
+  - ? (任意の位置文字を表す記号)
+- cat (CATnate) 指定したファイルの内容をターミナル上に出力
+- 「>」 左辺の実行結果を右辺に指定したファイルに書き込む（中身全て上書きされる）
+- 「>>」 左辺の実行結果を右辺に指定したファイルの末尾に追記する
+- vi ターミナル上でエディタを即時起動
+  - インサートモード: ファイル編集モード、iキーで切替
+  - ノーマルモード: 移動、保存、検索、削除などの操作が可能、escキーで切替
+    - j (下に移動)
+    - k (上に移動)
+    - h (左に移動)
+    - l (右に移動)
+    - :w (保存)
+    - :wq (保存して終了)
+    - :q! (保存せずに強制終了)
+    - u (変更内容を一つもとに戻す)
+    - Ctrl + r (変更内容を一つ前に進める)
